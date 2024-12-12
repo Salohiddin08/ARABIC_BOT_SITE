@@ -4,18 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verify Code</title>
+    <style>
+        /* Resetting some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container for form */
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #555;
+            text-align: left;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .input-group {
+            text-align: left;
+        }
+
+        /* Styling for mobile responsiveness */
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            input, button {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Ro'yxatdan o'tish</h1>
-    <form action="{% url 'verify_code' %}" method="post">
-        {% csrf_token %}
-        <label for="phone_number">Telefon raqamingiz:</label>
-        <input type="text" name="phone_number" id="phone_number" required>
-        <br>
-        <label for="verification_code">Tasdiqlash kodi:</label>
-        <input type="text" name="verification_code" id="verification_code" required>
-        <br>
-        <button type="submit">Tasdiqlash</button>
-    </form>
+    <div class="container">
+        <h1>Ro'yxatdan o'tish</h1>
+        <form action="{% url 'verify_code' %}" method="post">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="phone_number">Telefon raqamingiz:</label>
+                <input type="text" name="phone_number" id="phone_number" required>
+            </div>
+            <div class="input-group">
+                <label for="verification_code">Tasdiqlash kodi:</label>
+                <input type="text" name="verification_code" id="verification_code" required>
+            </div>
+            <button type="submit">Tasdiqlash</button>
+        </form>
+    </div>
 </body>
 </html>

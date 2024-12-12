@@ -1,21 +1,78 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Home</title>
-</head>
-<body>
-    <h2>Siz ro'yxatdan muvaffaqiyatli o'tdingiz!</h2>
-</body>
-</html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <style>
+        /* Resetting some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container for content */
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Xush kelibsiz!</h1>
-    <p>Ro'yxatdan muvaffaqiyatli o'tdingiz!</p>
+    <div class="container">
+        <h1>Xush kelibsiz!</h1>
+        <h2>Siz ro'yxatdan muvaffaqiyatli o'tdingiz!</h2>
+        <p>Ro'yxatdan o'tish jarayoni muvaffaqiyatli yakunlandi. Endi tizimga kirish yoki boshqa amallarni bajarishingiz mumkin.</p>
+    </div>
 </body>
 </html>
